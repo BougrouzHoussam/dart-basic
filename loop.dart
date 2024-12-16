@@ -5,8 +5,8 @@ void main() {
   for (i; i > 10; i++) {
     print(i);
   }
-  do {
-    i++;
-    print(i);
-  } while (i < 10);
+  // do {
+  //   i++;
+  //   print(i);
+  // } while (i < 10);
 }
