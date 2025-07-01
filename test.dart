@@ -20,6 +20,7 @@ void main() {
   //print(s);
   // int x = name.compareTo('step');
   //print(x);
+  print(123 + 35);
 }
 
 String dart(int x) {
