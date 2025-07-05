@@ -1,4 +1,4 @@
-// ignore_for_file: unused_local_variable
+// ignore_for_file: unused_local_variable, dead_code
 
 void main() {
   // Variable declaration
@@ -71,6 +71,50 @@ void main() {
   // Using subclass and constructor
   Student student = Student('Charlie', 20, 'Computer Science');
   student.sayHello();
+  // type test
+  String test = 'Hello, Dart!';
+  print(test is int);
+  print(test is! int);
+  // arithmetic operator
+  int a = 5;
+  int b = 2;
+  //* % the remain of divide two number
+  print(a % b);
+  // assignment operator
+  int c = 10;
+  var d;
+  c += 5; // equivalent to c = c + 5
+  c -= 3; // equivalent to c = c - 3
+  c *= 2; // equivalent to c = c * 2
+  c ~/= 4; // equivalent to c = c ~/ 4 (integer division)
+  c %= 3; // equivalent to c = c % 3
+  c++; // equivalent to c = c + 1 (increment)
+  c--; // equivalent to c = c - 1 (decrement)
+  //! look so important
+  d ??= 20; // equivalent to d = d ?? 20 (if d is null, assign 20)
+  print(d); //print 20
+  print('Updated c: $c');
+  // relational operator
+  if (a > b) {
+    print('$a is greater than $b');
+  } else {
+    print('$a is not greater than $b');
+  }
+  // logical operator
+  bool condition1 = true;
+  bool condition2 = false;
+  print(condition1 && condition2); // false
+  print(condition1 || condition2); // true
+  print(!condition1); // false
+  // bitwise operator
+  int x = 5; // 0101 in binary
+  int y = 3; // 0011 in binary
+  print(x & y); // bitwise AND, result: 1 (0001 in binary)
+  print(x | y); // bitwise OR, result: 7 (0111 in
+  // binary)
+  print(x ^ y); // bitwise XOR, result: 6 (0110 in binary)
+  print(~x); // bitwise NOT, result: -6 (inverts bits of x)
+  print(x << 1); // left shift, result: 10 (1010 in binary)
 }
 
 // Class with constructor and method
@@ -97,4 +141,6 @@ class Student extends Person {
   void sayHello() {
     print('Hi, I am $name, $age years old, studying $major.');
   }
+
+  //
 }
