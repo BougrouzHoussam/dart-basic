@@ -48,7 +48,8 @@ void main() {
       print('Unknown city.');
   }
 
-  // Loop - for
+  // Loop - for here we declare a list than add a var to put every item inside and printed
+
   for (var fruit in fruits) {
     print(fruit);
   }
@@ -94,6 +95,12 @@ void main() {
   d ??= 20; // equivalent to d = d ?? 20 (if d is null, assign 20)
   print(d); //print 20
   print('Updated c: $c');
+  //! inline if important
+  c > 300 ? print('$c is big the 300') : print('$c is smaller then 300');
+  //! if null
+  int? nullableValue;
+  int nonNullableValue =
+      nullableValue ?? 10; // if nullableValue is null, assign 10
   // relational operator
   if (a > b) {
     print('$a is greater than $b');

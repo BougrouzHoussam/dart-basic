@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 void main() {
   person p = person(name: 'name', age: 44);
 
