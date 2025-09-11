@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 void main(List<String> args) {
   //?the problem is that this is hard when you
   //?enter a lot of info so we use the constractor
@@ -5,6 +7,14 @@ void main(List<String> args) {
 
   //!so use this insted of set and get constractor
   ppl one = ppl(name: 'name', age: 18);
+  cars civic = cars();
+  String carname = 'bmw';
+  int carage = 2020;
+  //! basic class content
+  civic.name = "honda";
+  civic.age = 2001;
+  civic.engine = "v8";
+  civic.prioption();
 
   //! if you want to do somthing work in the
   //! begin of the app use it in the constractor
@@ -20,7 +30,7 @@ void main(List<String> args) {
   print('${one.age} ${one.name}');
 }
 
-// THIS  it refer toi the class so when you use the
+// THIS  it refer to the class so when you use the
 // same name in function it refer to the object you want
 class ppl {
   late String name;
@@ -49,6 +59,20 @@ class ppl {
   }
 
   void pri() {
-    print('you are in the function');
+    print('you are in the function that is inside the class');
   }
+}
+
+class cars {
+  late String name;
+  late int age;
+  late String engine;
+
+  void prioption() {
+    print(this.name + ' ' + this.age.toString());
+  }
+
+  // getter and setter
+  String get engine1 => engine;
+  set engine1(String value) => engine = value;
 }
