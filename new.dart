@@ -3,4 +3,7 @@ void main(List<String> args) {
   Map<String, int> mymap = {'name': 10, 'age': 18, 'car': 2020};
   print(mymap.keys);
   print(mylist);
+  for (int i = 0; i < mylist.length; i++) {
+    print(mylist[i]);
+  }
 }

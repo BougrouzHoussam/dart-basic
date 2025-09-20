@@ -4,7 +4,10 @@ void main(List<String> args) {
   //?the problem is that this is hard when you
   //?enter a lot of info so we use the constractor
   //?exist but empty and here is the turn for the bract in the class
-
+  test t1 = test(name: 'name', age: 18, email: 'email', phone: 123456);
+  print(t1.information());
+  t1.name = 'new name';
+  print(t1.information());
   //!so use this insted of set and get constractor
   ppl one = ppl(name: 'name', age: 18);
   cars civic = cars();
@@ -40,7 +43,7 @@ class ppl {
     this.name = name;
     this.age = age;
   }
-
+  //! the problem is that you can change the value outside in the main function so there is a special kind of constractor
   // void getknowthis(String name) {
   //   this.name = name;
   //   print(name);
@@ -75,4 +78,23 @@ class cars {
   // getter and setter
   String get engine1 => engine;
   set engine1(String value) => engine = value;
+}
+
+class test {
+  String name;
+  int age;
+  String email;
+  int phone;
+
+  test({
+    required this.age,
+    required this.name,
+    required this.email,
+    required this.phone,
+  }) {
+    print('the begin of the constractor');
+  }
+  String information() {
+    return 'name:$name age:$age email:$email phone:$phone';
+  }
 }

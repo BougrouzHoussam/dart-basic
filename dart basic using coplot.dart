@@ -35,6 +35,9 @@ void main() {
   for (var number in numbers) {
     print('Number: $number');
   }
+  numbers.forEach((num) {
+    print('Foreach Number: $num');
+  });
 
   // Functions
   greet('Alice');
@@ -46,7 +49,7 @@ void main() {
 
   // Exception handling
   try {
-    int result = 10 ~/ 0; // Integer division by zero
+    int result = 9 ~/ 0; // Integer division by zero
     print(result);
   } catch (e) {
     print('Error: $e');
@@ -74,4 +77,5 @@ class Person {
     print('Hi, my name is $name and I am $age years old.');
   }
 }
+
 // this is a comment
